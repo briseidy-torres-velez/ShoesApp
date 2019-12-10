@@ -4,9 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Common
+namespace Data
 {
-    public class Class1
+    class CapaDatos
     {
+        //
     }
 }

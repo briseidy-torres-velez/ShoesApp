@@ -56,6 +56,7 @@
     <Compile Include="ACOB_SearchByIdOrName_Result.cs">
       <DependentUpon>ModelShoes.tt</DependentUpon>
     </Compile>
+    <Compile Include="CapaDatos.cs" />
     <Compile Include="CatBrands.cs">
       <DependentUpon>ModelShoes.tt</DependentUpon>
     </Compile>
@@ -80,7 +81,6 @@
     <Compile Include="CatTypeProduct.cs">
       <DependentUpon>ModelShoes.tt</DependentUpon>
     </Compile>
-    <Compile Include="Class1.cs" />
     <Compile Include="Comments.cs">
       <DependentUpon>ModelShoes.tt</DependentUpon>
     </Compile>
