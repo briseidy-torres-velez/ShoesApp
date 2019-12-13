@@ -10,17 +10,13 @@
 namespace Data
 {
     using System;
-    using System.Collections.Generic;
     
-    public partial class ImagesProduct
+    public partial class ADER1_SearchProducts_Result
     {
-        public int IdImage { get; set; }
-        public int IdProduct { get; set; }
-        public string Decription { get; set; }
-        public byte[] Image { get; set; }
-        public System.DateTime DateUpdate { get; set; }
-        public bool IsEnabled { get; set; }
-    
-        public virtual Products Products { get; set; }
+        public int Id { get; set; }
+        public string Nombre { get; set; }
+        public string Description { get; set; }
+        public decimal PriceClient { get; set; }
+        public string HexaDecimal { get; set; }
     }
 }

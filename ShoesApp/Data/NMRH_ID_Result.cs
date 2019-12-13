@@ -11,7 +11,7 @@ namespace Data
 {
     using System;
     
-    public partial class JEVJ1_MuestraProductos_Result
+    public partial class NMRH_ID_Result
     {
         public int Id { get; set; }
         public Nullable<int> IdType { get; set; }

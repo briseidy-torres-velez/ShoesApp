@@ -59,6 +59,7 @@
             this.buttonID.TabIndex = 1;
             this.buttonID.Text = "Buscar";
             this.buttonID.UseVisualStyleBackColor = true;
+            this.buttonID.Click += new System.EventHandler(this.buttonID_Click);
             // 
             // label2
             // 
@@ -92,6 +93,7 @@
             this.buttoName.TabIndex = 5;
             this.buttoName.Text = "Buscar";
             this.buttoName.UseVisualStyleBackColor = true;
+            this.buttoName.Click += new System.EventHandler(this.buttoName_Click);
             // 
             // dataGridView1
             // 
@@ -106,16 +108,17 @@
             // 
             this.buttonNew.Location = new System.Drawing.Point(393, 18);
             this.buttonNew.Name = "buttonNew";
-            this.buttonNew.Size = new System.Drawing.Size(85, 26);
+            this.buttonNew.Size = new System.Drawing.Size(85, 35);
             this.buttonNew.TabIndex = 7;
             this.buttonNew.Text = "Nuevo";
             this.buttonNew.UseVisualStyleBackColor = true;
+            this.buttonNew.Click += new System.EventHandler(this.buttonNew_Click);
             // 
             // buttonEdit
             // 
             this.buttonEdit.Location = new System.Drawing.Point(514, 18);
             this.buttonEdit.Name = "buttonEdit";
-            this.buttonEdit.Size = new System.Drawing.Size(85, 26);
+            this.buttonEdit.Size = new System.Drawing.Size(84, 35);
             this.buttonEdit.TabIndex = 8;
             this.buttonEdit.Text = "Editar";
             this.buttonEdit.UseVisualStyleBackColor = true;
@@ -124,10 +127,11 @@
             // 
             this.buttonDelete.Location = new System.Drawing.Point(626, 18);
             this.buttonDelete.Name = "buttonDelete";
-            this.buttonDelete.Size = new System.Drawing.Size(85, 26);
+            this.buttonDelete.Size = new System.Drawing.Size(88, 35);
             this.buttonDelete.TabIndex = 9;
             this.buttonDelete.Text = "Eliminar";
             this.buttonDelete.UseVisualStyleBackColor = true;
+            this.buttonDelete.Click += new System.EventHandler(this.buttonDelete_Click);
             // 
             // Form1
             // 
