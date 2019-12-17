@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.textBoxPriceClient = new System.Windows.Forms.TextBox();
             this.textBoxObservacion = new System.Windows.Forms.TextBox();
             this.textBoxPriceMember = new System.Windows.Forms.TextBox();
@@ -41,17 +40,11 @@
             this.textBoxAdd = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.label2 = new System.Windows.Forms.Label();
+            this.buttonUpdate = new System.Windows.Forms.Button();
+            this.label3 = new System.Windows.Forms.Label();
+            this.textBoxID = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
-            // 
-            // dataGridView1
-            // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(13, 25);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowTemplate.Height = 28;
-            this.dataGridView1.Size = new System.Drawing.Size(761, 103);
-            this.dataGridView1.TabIndex = 0;
             // 
             // textBoxPriceClient
             // 
@@ -149,11 +142,51 @@
             this.label1.TabIndex = 29;
             this.label1.Text = "Nombre";
             // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(541, 115);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(51, 20);
+            this.label2.TabIndex = 41;
+            this.label2.Text = "label2";
+            // 
+            // buttonUpdate
+            // 
+            this.buttonUpdate.Location = new System.Drawing.Point(580, 310);
+            this.buttonUpdate.Name = "buttonUpdate";
+            this.buttonUpdate.Size = new System.Drawing.Size(118, 72);
+            this.buttonUpdate.TabIndex = 42;
+            this.buttonUpdate.Text = "Modificar";
+            this.buttonUpdate.UseVisualStyleBackColor = true;
+            this.buttonUpdate.Click += new System.EventHandler(this.buttonUpdate_Click);
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(65, 115);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(26, 20);
+            this.label3.TabIndex = 43;
+            this.label3.Text = "ID";
+            // 
+            // textBoxID
+            // 
+            this.textBoxID.Location = new System.Drawing.Point(163, 109);
+            this.textBoxID.Name = "textBoxID";
+            this.textBoxID.Size = new System.Drawing.Size(100, 26);
+            this.textBoxID.TabIndex = 44;
+            this.textBoxID.UseWaitCursor = true;
+            // 
             // Form3
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.textBoxID);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.buttonUpdate);
+            this.Controls.Add(this.label2);
             this.Controls.Add(this.textBoxPriceClient);
             this.Controls.Add(this.textBoxObservacion);
             this.Controls.Add(this.textBoxPriceMember);
@@ -166,17 +199,15 @@
             this.Controls.Add(this.textBoxAdd);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.dataGridView1);
             this.Name = "Form3";
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.Text = "Modificar";
+            this.Load += new System.EventHandler(this.Form3_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.TextBox textBoxPriceClient;
         private System.Windows.Forms.TextBox textBoxObservacion;
         private System.Windows.Forms.TextBox textBoxPriceMember;
@@ -189,5 +220,9 @@
         private System.Windows.Forms.TextBox textBoxAdd;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Button buttonUpdate;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.TextBox textBoxID;
     }
 }

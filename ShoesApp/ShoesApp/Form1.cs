@@ -64,5 +64,13 @@ namespace ShoesApp
             dataGridView1.DataSource = cd.Search(int.Parse(textBoxID.Text));
 
         }
+
+        private void buttonEdit_Click(object sender, EventArgs e)
+        {
+            Form3 f3 = new Form3();
+        
+            f3.Show();
+
+        }
     }
 }

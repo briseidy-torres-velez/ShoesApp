@@ -108,6 +108,7 @@ namespace Data
                     AddET.IdProvider,AddET.Title,AddET.Nombre,
                     AddET.Description,AddET.Observations,AddET.PriceDistributor,
                     AddET.PriceClient,AddET.PriceMember,AddET.IsEnabled,AddET.Keywords);
+
                 return true;
   
         }
@@ -121,6 +122,14 @@ namespace Data
             {
                 throw;
             }  
+        }
+        public bool Update(AddProdET AddET)
+        {
+            DTE.BRTV_updateM(AddET.Id,AddET.IdType, AddET.IdColor, AddET.IdBrand,
+                    AddET.IdProvider, AddET.Title, AddET.Nombre,
+                    AddET.Description, AddET.Observations, AddET.PriceDistributor,
+                    AddET.PriceClient, AddET.PriceMember, AddET.IsEnabled, AddET.Keywords);
+            return true;
         }
     }
 }

@@ -8,7 +8,7 @@ namespace Data
 {
     public class AddProdET
     {
-       // public int Id { get; set; }
+        public int Id { get; set; }
         public Nullable<int> IdType { get; set; }
         public Nullable<int> IdColor { get; set; }
         public Nullable<int> IdBrand { get; set; }
