@@ -1718,5 +1718,15 @@ namespace Data
     
             return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("BRTV_updateM", idParameter, idTypeParameter, idColorParameter, idBrandParameter, idProviderParameter, titleParameter, nombreParameter, descriptionParameter, observationParameter, priceDistributorParameter, priceClientParameter, priceMemberParameter, isEnabledParameter, keywordsParameter);
         }
+    
+        public virtual ObjectResult<BRTV_ShowChanges_Result> BRTV_ShowChanges()
+        {
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<BRTV_ShowChanges_Result>("BRTV_ShowChanges");
+        }
+    
+        public virtual ObjectResult<BRTV_InsertChanges_Result> BRTV_InsertChanges()
+        {
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<BRTV_InsertChanges_Result>("BRTV_InsertChanges");
+        }
     }
 }

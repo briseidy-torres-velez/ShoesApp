@@ -131,5 +131,9 @@ namespace Data
                     AddET.PriceClient, AddET.PriceMember, AddET.IsEnabled, AddET.Keywords);
             return true;
         }
+        public void XmlMethod()
+        {
+            
+        }
     }
 }

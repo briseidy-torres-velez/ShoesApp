@@ -581,12 +581,14 @@ warning 6002: The table/view 'DataProducts.sys.database_firewall_rules' does not
           <Parameter Name="IsEnabled" Type="bit" Mode="In" />
           <Parameter Name="Keywords" Type="nvarchar(max)" Mode="In" />
         </Function>
+        <Function Name="BRTV_InsertChanges" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
         <Function Name="BRTV_SearchID" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
           <Parameter Name="Id" Type="int" Mode="In" />
         </Function>
         <Function Name="BRTV_SearchName" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
           <Parameter Name="Name" Type="varchar" Mode="In" />
         </Function>
+        <Function Name="BRTV_ShowChanges" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
         <Function Name="BRTV_updateM" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
           <Parameter Name="Id" Type="int" Mode="In" />
           <Parameter Name="IdType" Type="int" Mode="In" />
@@ -2016,6 +2018,8 @@ warning 6002: The table/view 'DataProducts.sys.database_firewall_rules' does not
             <Parameter Name="IsEnabled" Mode="In" Type="Boolean" />
             <Parameter Name="Keywords" Mode="In" Type="String" />
           </FunctionImport>
+          <FunctionImport Name="BRTV_ShowChanges" ReturnType="Collection(DataProductsModel.BRTV_ShowChanges_Result)" />
+          <FunctionImport Name="BRTV_InsertChanges" ReturnType="Collection(DataProductsModel.BRTV_InsertChanges_Result)" />
         </EntityContainer>
         <ComplexType Name="ACOB_GetColors_Result">
           <Property Type="Int32" Name="IdColor" Nullable="false" />
@@ -2632,6 +2636,32 @@ warning 6002: The table/view 'DataProducts.sys.database_firewall_rules' does not
           <Property Type="Int32" Name="ID" Nullable="false" />
           <Property Type="String" Name="Owner" Nullable="true" MaxLength="128" />
           <Property Type="Int32" Name="OwnerID" Nullable="false" />
+        </ComplexType>
+        <ComplexType Name="BRTV_ShowChanges_Result">
+          <Property Type="Int32" Name="IdLog" Nullable="false" />
+          <Property Type="Int32" Name="IdProduct" Nullable="false" />
+          <Property Type="Byte" Name="ActionMade" Nullable="false" />
+        </ComplexType>
+        <ComplexType Name="BRTV_InsertChanges_Result">
+          <Property Type="Int32" Name="Id" Nullable="false" />
+          <Property Type="Int32" Name="IdType" Nullable="true" />
+          <Property Type="Int32" Name="IdColor" Nullable="true" />
+          <Property Type="Int32" Name="IdBrand" Nullable="true" />
+          <Property Type="Int32" Name="IdProvider" Nullable="true" />
+          <Property Type="Int32" Name="IdCatalog" Nullable="true" />
+          <Property Type="String" Name="Title" Nullable="false" />
+          <Property Type="String" Name="Nombre" Nullable="false" />
+          <Property Type="String" Name="Description" Nullable="false" />
+          <Property Type="String" Name="Observations" Nullable="false" />
+          <Property Type="Decimal" Name="PriceDistributor" Nullable="true" Precision="18" Scale="0" />
+          <Property Type="Decimal" Name="PriceClient" Nullable="false" Precision="18" Scale="0" />
+          <Property Type="Decimal" Name="PriceMember" Nullable="false" Precision="18" Scale="0" />
+          <Property Type="Boolean" Name="IsEnabled" Nullable="false" />
+          <Property Type="String" Name="Keywords" Nullable="true" />
+          <Property Type="DateTime" Name="DateUpdate" Nullable="true" Precision="23" />
+          <Property Type="Int32" Name="IdLog" Nullable="false" />
+          <Property Type="Int32" Name="IdProduct" Nullable="false" />
+          <Property Type="Byte" Name="ActionMade" Nullable="false" />
         </ComplexType>
       </Schema>
     </edmx:ConceptualModels>
@@ -3655,6 +3685,40 @@ warning 6002: The table/view 'DataProducts.sys.database_firewall_rules' does not
           <FunctionImportMapping FunctionImportName="sp_renamediagram" FunctionName="DataProductsModel.Store.sp_renamediagram" />
           <FunctionImportMapping FunctionImportName="sp_upgraddiagrams" FunctionName="DataProductsModel.Store.sp_upgraddiagrams" />
           <FunctionImportMapping FunctionImportName="BRTV_updateM" FunctionName="DataProductsModel.Store.BRTV_updateM" />
+          <FunctionImportMapping FunctionImportName="BRTV_ShowChanges" FunctionName="DataProductsModel.Store.BRTV_ShowChanges">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="DataProductsModel.BRTV_ShowChanges_Result">
+                <ScalarProperty Name="IdLog" ColumnName="IdLog" />
+                <ScalarProperty Name="IdProduct" ColumnName="IdProduct" />
+                <ScalarProperty Name="ActionMade" ColumnName="ActionMade" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="BRTV_InsertChanges" FunctionName="DataProductsModel.Store.BRTV_InsertChanges">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="DataProductsModel.BRTV_InsertChanges_Result">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="IdType" ColumnName="IdType" />
+                <ScalarProperty Name="IdColor" ColumnName="IdColor" />
+                <ScalarProperty Name="IdBrand" ColumnName="IdBrand" />
+                <ScalarProperty Name="IdProvider" ColumnName="IdProvider" />
+                <ScalarProperty Name="IdCatalog" ColumnName="IdCatalog" />
+                <ScalarProperty Name="Title" ColumnName="Title" />
+                <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="Observations" ColumnName="Observations" />
+                <ScalarProperty Name="PriceDistributor" ColumnName="PriceDistributor" />
+                <ScalarProperty Name="PriceClient" ColumnName="PriceClient" />
+                <ScalarProperty Name="PriceMember" ColumnName="PriceMember" />
+                <ScalarProperty Name="IsEnabled" ColumnName="IsEnabled" />
+                <ScalarProperty Name="Keywords" ColumnName="Keywords" />
+                <ScalarProperty Name="DateUpdate" ColumnName="DateUpdate" />
+                <ScalarProperty Name="IdLog" ColumnName="IdLog" />
+                <ScalarProperty Name="IdProduct" ColumnName="IdProduct" />
+                <ScalarProperty Name="ActionMade" ColumnName="ActionMade" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
         </EntityContainerMapping>
       </Mapping>
     </edmx:Mappings>
