@@ -57,7 +57,29 @@ namespace ShoesApp
         private void Form4_Load(object sender, EventArgs e)
         {
             CargarListBox();
+            FileSystemWatcher watcher = new FileSystemWatcher(@"C:/Users/Curso/Documents/ShoesAppXML");
+            watcher.EnableRaisingEvents = true;
+            watcher.IncludeSubdirectories = true;
 
+            watcher.Changed += Watcher_Changed;
+            watcher.Created += Watcher_Created;
+            watcher.Deleted += Watcher_Deleted;
+
+        }
+
+        private void Watcher_Deleted(object sender, FileSystemEventArgs e)
+        {
+            Console.WriteLine("File: {0} eliminado a las: {1}", e.Name, DateTime.Now.ToLocalTime());
+        }
+
+        private void Watcher_Created(object sender, FileSystemEventArgs e)
+        {
+            Console.WriteLine("File: {0} creado a las: {1}", e.Name, DateTime.Now.ToLocalTime());
+        }
+
+        private void Watcher_Changed(object sender, FileSystemEventArgs e)
+        {
+            Console.WriteLine("File: {0} actualizado a las: {1}", e.Name, DateTime.Now.ToLocalTime());
         }
 
         public void CargarListBox()
