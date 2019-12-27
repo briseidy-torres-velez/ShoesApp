@@ -10,10 +10,12 @@
 namespace Data
 {
     using System;
+    using System.Collections.Generic;
     
-    public partial class eumc1_getAllProviders_Result
+    public partial class ChangesOnProduct
     {
-        public string Name { get; set; }
-        public int IdProvider { get; set; }
+        public int IdLog { get; set; }
+        public int IdProduct { get; set; }
+        public int ActionMade { get; set; }
     }
 }

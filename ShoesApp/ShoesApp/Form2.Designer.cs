@@ -44,8 +44,21 @@
             this.textBoxPriceMember = new System.Windows.Forms.TextBox();
             this.textBoxObservacion = new System.Windows.Forms.TextBox();
             this.textBoxPriceClient = new System.Windows.Forms.TextBox();
+            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.label3 = new System.Windows.Forms.Label();
-            this.checkBoxEn = new System.Windows.Forms.CheckBox();
+            this.textBoxTipo = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.textBoxColor = new System.Windows.Forms.TextBox();
+            this.textBoxMarca = new System.Windows.Forms.TextBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.textBoxProveedor = new System.Windows.Forms.TextBox();
+            this.label8 = new System.Windows.Forms.Label();
+            this.textBoxCatalogo = new System.Windows.Forms.TextBox();
+            this.label10 = new System.Windows.Forms.Label();
+            this.textBoxDistribuidor = new System.Windows.Forms.TextBox();
+            this.label14 = new System.Windows.Forms.Label();
+            this.textBoxKeywords = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox)).BeginInit();
             this.SuspendLayout();
             // 
@@ -181,32 +194,146 @@
             this.textBoxPriceClient.Size = new System.Drawing.Size(100, 26);
             this.textBoxPriceClient.TabIndex = 28;
             // 
+            // dateTimePicker1
+            // 
+            this.dateTimePicker1.Location = new System.Drawing.Point(507, 324);
+            this.dateTimePicker1.Name = "dateTimePicker1";
+            this.dateTimePicker1.Size = new System.Drawing.Size(200, 26);
+            this.dateTimePicker1.TabIndex = 31;
+            // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(496, 333);
+            this.label3.Location = new System.Drawing.Point(842, 32);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(68, 20);
-            this.label3.TabIndex = 29;
-            this.label3.Text = "Enabled";
+            this.label3.Size = new System.Drawing.Size(39, 20);
+            this.label3.TabIndex = 32;
+            this.label3.Text = "Tipo";
             // 
-            // checkBoxEn
+            // textBoxTipo
             // 
-            this.checkBoxEn.AutoSize = true;
-            this.checkBoxEn.Location = new System.Drawing.Point(615, 333);
-            this.checkBoxEn.Name = "checkBoxEn";
-            this.checkBoxEn.Size = new System.Drawing.Size(124, 24);
-            this.checkBoxEn.TabIndex = 30;
-            this.checkBoxEn.Text = "checkBoxEn";
-            this.checkBoxEn.UseVisualStyleBackColor = true;
+            this.textBoxTipo.Location = new System.Drawing.Point(913, 29);
+            this.textBoxTipo.Name = "textBoxTipo";
+            this.textBoxTipo.Size = new System.Drawing.Size(100, 26);
+            this.textBoxTipo.TabIndex = 33;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(842, 92);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(46, 20);
+            this.label4.TabIndex = 34;
+            this.label4.Text = "Color";
+            // 
+            // textBoxColor
+            // 
+            this.textBoxColor.Location = new System.Drawing.Point(913, 92);
+            this.textBoxColor.Name = "textBoxColor";
+            this.textBoxColor.Size = new System.Drawing.Size(100, 26);
+            this.textBoxColor.TabIndex = 35;
+            // 
+            // textBoxMarca
+            // 
+            this.textBoxMarca.Location = new System.Drawing.Point(913, 145);
+            this.textBoxMarca.Name = "textBoxMarca";
+            this.textBoxMarca.Size = new System.Drawing.Size(100, 26);
+            this.textBoxMarca.TabIndex = 36;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(842, 151);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(53, 20);
+            this.label5.TabIndex = 37;
+            this.label5.Text = "Marca";
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(835, 207);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(81, 20);
+            this.label7.TabIndex = 38;
+            this.label7.Text = "Proveedor";
+            // 
+            // textBoxProveedor
+            // 
+            this.textBoxProveedor.Location = new System.Drawing.Point(922, 201);
+            this.textBoxProveedor.Name = "textBoxProveedor";
+            this.textBoxProveedor.Size = new System.Drawing.Size(100, 26);
+            this.textBoxProveedor.TabIndex = 39;
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(851, 242);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(73, 20);
+            this.label8.TabIndex = 40;
+            this.label8.Text = "Catalogo";
+            // 
+            // textBoxCatalogo
+            // 
+            this.textBoxCatalogo.Location = new System.Drawing.Point(922, 242);
+            this.textBoxCatalogo.Name = "textBoxCatalogo";
+            this.textBoxCatalogo.Size = new System.Drawing.Size(100, 26);
+            this.textBoxCatalogo.TabIndex = 41;
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(779, 288);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(137, 20);
+            this.label10.TabIndex = 42;
+            this.label10.Text = "Precio Distribuidor";
+            this.label10.Click += new System.EventHandler(this.label10_Click);
+            // 
+            // textBoxDistribuidor
+            // 
+            this.textBoxDistribuidor.Location = new System.Drawing.Point(941, 285);
+            this.textBoxDistribuidor.Name = "textBoxDistribuidor";
+            this.textBoxDistribuidor.Size = new System.Drawing.Size(100, 26);
+            this.textBoxDistribuidor.TabIndex = 43;
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Location = new System.Drawing.Point(851, 330);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(77, 20);
+            this.label14.TabIndex = 44;
+            this.label14.Text = "Keywords";
+            // 
+            // textBoxKeywords
+            // 
+            this.textBoxKeywords.Location = new System.Drawing.Point(941, 330);
+            this.textBoxKeywords.Name = "textBoxKeywords";
+            this.textBoxKeywords.Size = new System.Drawing.Size(100, 26);
+            this.textBoxKeywords.TabIndex = 45;
             // 
             // Form2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1766, 504);
-            this.Controls.Add(this.checkBoxEn);
+            this.ClientSize = new System.Drawing.Size(1299, 504);
+            this.Controls.Add(this.textBoxKeywords);
+            this.Controls.Add(this.label14);
+            this.Controls.Add(this.textBoxDistribuidor);
+            this.Controls.Add(this.label10);
+            this.Controls.Add(this.textBoxCatalogo);
+            this.Controls.Add(this.label8);
+            this.Controls.Add(this.textBoxProveedor);
+            this.Controls.Add(this.label7);
+            this.Controls.Add(this.label5);
+            this.Controls.Add(this.textBoxMarca);
+            this.Controls.Add(this.textBoxColor);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.textBoxTipo);
             this.Controls.Add(this.label3);
+            this.Controls.Add(this.dateTimePicker1);
             this.Controls.Add(this.textBoxPriceClient);
             this.Controls.Add(this.textBoxObservacion);
             this.Controls.Add(this.textBoxPriceMember);
@@ -250,7 +377,20 @@
         private System.Windows.Forms.TextBox textBoxPriceMember;
         private System.Windows.Forms.TextBox textBoxObservacion;
         private System.Windows.Forms.TextBox textBoxPriceClient;
+        private System.Windows.Forms.DateTimePicker dateTimePicker1;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.CheckBox checkBoxEn;
+        private System.Windows.Forms.TextBox textBoxTipo;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.TextBox textBoxColor;
+        private System.Windows.Forms.TextBox textBoxMarca;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.TextBox textBoxProveedor;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.TextBox textBoxCatalogo;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.TextBox textBoxDistribuidor;
+        private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.TextBox textBoxKeywords;
     }
 }

@@ -11,8 +11,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Business", "Business\Busine
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Common", "Common\Common.csproj", "{F98AD945-5638-48E0-A8A2-7C6AA4518A32}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Monitoreo", "Monitoreo\Monitoreo.csproj", "{13339D1B-6BBE-41AB-B813-A6D9FD447B44}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -35,10 +33,6 @@ Global
 		{F98AD945-5638-48E0-A8A2-7C6AA4518A32}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F98AD945-5638-48E0-A8A2-7C6AA4518A32}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F98AD945-5638-48E0-A8A2-7C6AA4518A32}.Release|Any CPU.Build.0 = Release|Any CPU
-		{13339D1B-6BBE-41AB-B813-A6D9FD447B44}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{13339D1B-6BBE-41AB-B813-A6D9FD447B44}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{13339D1B-6BBE-41AB-B813-A6D9FD447B44}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{13339D1B-6BBE-41AB-B813-A6D9FD447B44}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

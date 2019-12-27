@@ -27,15 +27,17 @@ namespace ShoesApp
         private void buttonUpdate_Click(object sender, EventArgs e)
         {
 
-            Update();
+
+            ProductUpdate();
+            
 
         }
-        public void Update(int ID)
+        public void ProductUpdate()
         {
             CapaDatos cd = new CapaDatos();
             AddProdET addEt = new AddProdET();
 
-
+            
             addEt.Id = int.Parse(textBoxID.Text);
             addEt.Nombre = textBoxAdd.Text;
             addEt.Description = textBoxDesc.Text;
@@ -44,6 +46,14 @@ namespace ShoesApp
             addEt.PriceClient = decimal.Parse(textBoxPriceClient.Text);
             addEt.PriceMember = decimal.Parse(textBoxPriceMember.Text);
             addEt.IsEnabled = true;
+            addEt.IdType = int.Parse(textBoxTipo.Text);
+            addEt.IdColor = int.Parse(textBoxColor.Text);
+            addEt.IdBrand = int.Parse(textBoxMarca.Text);
+            addEt.IdProvider = int.Parse(textBoxProveedor.Text);
+            addEt.IdCatalog = int.Parse(textBoxCatalago.Text);
+            addEt.PriceDistributor = decimal.Parse(textBoxDistribuidor.Text);
+            addEt.Keywords = textBoxKeywords.Text;
+            addEt.DateUpdate = dateTimePicker1.Value;
 
             if (cd.Update(addEt))
             {

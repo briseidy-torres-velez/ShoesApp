@@ -23,6 +23,6 @@ namespace Data
         public decimal PriceMember { get; set; }
         public bool IsEnabled { get; set; }
         public string Keywords { get; set; }
-        //public Nullable<System.DateTime> DateUpdate { get; set; }
+        public Nullable<System.DateTime> DateUpdate { get; set; }
     }
 }

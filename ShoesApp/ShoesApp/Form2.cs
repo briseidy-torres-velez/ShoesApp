@@ -36,6 +36,16 @@ namespace ShoesApp
             addEt.PriceClient = decimal.Parse(textBoxPriceClient.Text);
             addEt.PriceMember = decimal.Parse(textBoxPriceMember.Text);
             addEt.IsEnabled = true;
+            addEt.DateUpdate = dateTimePicker1.Value;
+            addEt.IdBrand = int.Parse(textBoxMarca.Text);
+            addEt.IdCatalog = int.Parse(textBoxCatalogo.Text);
+            addEt.IdColor = int.Parse(textBoxColor.Text);
+            addEt.IdProvider = int.Parse(textBoxProveedor.Text);
+            addEt.IdType = int.Parse(textBoxTipo.Text);
+            addEt.Keywords = textBoxKeywords.Text;
+            addEt.PriceDistributor = decimal.Parse(textBoxDistribuidor.Text);
+           
+            
 
             if (cn.Insert(addEt))
             {
@@ -45,6 +55,11 @@ namespace ShoesApp
             {
                 label2.Text = "No se pudo agregar";
             }
+        }
+
+        private void label10_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
