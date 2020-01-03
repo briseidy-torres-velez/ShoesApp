@@ -158,7 +158,7 @@ namespace ShoesApp
             MessageBox.Show("Se elimino el archivo");
 
             CargarListBox();
-
+            //
 
         }
     }
