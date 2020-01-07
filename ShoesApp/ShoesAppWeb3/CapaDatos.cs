@@ -1,14 +1,14 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using System.Web;
+using ShoesAppWeb3.Models;
 
-namespace Data
+namespace ShoesAppWeb3
 {
     public class CapaDatos
     {
-         DTE  = new DataProductsEntities();
+        DataProductsEntities DTE  = new DataProductsEntities();
         public List<BRTV_Show_Result> Show1()
         {
 
@@ -38,7 +38,10 @@ namespace Data
             }
             return listShow;
         }
-        public List<BRTV_InsertChanges_Result>NewProduct()
+
+     
+
+        public List<BRTV_InsertChanges_Result> NewProduct()
         {
             List<BRTV_InsertChanges_Result> list = new List<BRTV_InsertChanges_Result>();
             foreach (var item in DTE.BRTV_InsertChanges())
@@ -64,7 +67,7 @@ namespace Data
             }
             return list;
         }
-        public List<BRTV_UpdateChanges_Result>Changes()
+        public List<BRTV_UpdateChanges_Result> Changes()
         {
             List<BRTV_UpdateChanges_Result> list = new List<BRTV_UpdateChanges_Result>();
             foreach (var item in DTE.BRTV_UpdateChanges())
@@ -155,9 +158,10 @@ namespace Data
         }
         public bool Insert(AddProdET AddET)
         {
+            AddET.DateUpdate = DateTime.Now;
 
-            DTE.BRTV_Insert(AddET.IdType,AddET.IdColor,AddET.IdBrand,AddET.IdProvider,AddET.IdCatalog,AddET.Title,AddET.Nombre,AddET.Description,
-                AddET.Observations,AddET.PriceDistributor,AddET.PriceClient,AddET.PriceMember,AddET.IsEnabled,AddET.Keywords,AddET.DateUpdate);
+            DTE.BRTV_Insert(AddET.IdType, AddET.IdColor, AddET.IdBrand, AddET.IdProvider, AddET.IdCatalog, AddET.Title, AddET.Nombre, AddET.Description,
+                AddET.Observations, AddET.PriceDistributor, AddET.PriceClient, AddET.PriceMember, AddET.IsEnabled, AddET.Keywords, AddET.DateUpdate);
 
             return true;
 
@@ -176,12 +180,12 @@ namespace Data
         public bool Update(AddProdET AddET)
         {
             DTE.BRTV_updateM(AddET.Id, AddET.Title, AddET.Nombre, AddET.Description, AddET.Observations, AddET.PriceClient, AddET.PriceMember, AddET.IsEnabled,
-                AddET.IdType, AddET.IdColor,AddET.IdBrand,AddET.IdProvider,AddET.IdCatalog,AddET.PriceDistributor,AddET.Keywords,AddET.DateUpdate);
+                AddET.IdType, AddET.IdColor, AddET.IdBrand, AddET.IdProvider, AddET.IdCatalog, AddET.PriceDistributor, AddET.Keywords, AddET.DateUpdate);
             return true;
         }
         public void XmlMethod()
         {
-            
+
         }
     }
 }
