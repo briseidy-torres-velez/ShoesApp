@@ -54,142 +54,20 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AddProdET.cs" />
-    <Compile Include="BRTV_InsertChanges_Result.cs">
-      <DependentUpon>ModelShoesApp.tt</DependentUpon>
-    </Compile>
-    <Compile Include="BRTV_SearchID_Result.cs">
-      <DependentUpon>ModelShoesApp.tt</DependentUpon>
-    </Compile>
-    <Compile Include="BRTV_SearchName_Result.cs">
-      <DependentUpon>ModelShoesApp.tt</DependentUpon>
-    </Compile>
-    <Compile Include="BRTV_Show_Result.cs">
-      <DependentUpon>ModelShoesApp.tt</DependentUpon>
-    </Compile>
-    <Compile Include="BRTV_UpdateChanges_Result.cs">
-      <DependentUpon>ModelShoesApp.tt</DependentUpon>
-    </Compile>
     <Compile Include="CapaDatos.cs" />
-    <Compile Include="CatBrands.cs">
-      <DependentUpon>ModelShoesApp.tt</DependentUpon>
-    </Compile>
-    <Compile Include="CatCatalogs.cs">
-      <DependentUpon>ModelShoesApp.tt</DependentUpon>
-    </Compile>
-    <Compile Include="CatColors.cs">
-      <DependentUpon>ModelShoesApp.tt</DependentUpon>
-    </Compile>
-    <Compile Include="CatProviders.cs">
-      <DependentUpon>ModelShoesApp.tt</DependentUpon>
-    </Compile>
-    <Compile Include="CatRatings.cs">
-      <DependentUpon>ModelShoesApp.tt</DependentUpon>
-    </Compile>
-    <Compile Include="CatSizes.cs">
-      <DependentUpon>ModelShoesApp.tt</DependentUpon>
-    </Compile>
-    <Compile Include="CatTypeDetails.cs">
-      <DependentUpon>ModelShoesApp.tt</DependentUpon>
-    </Compile>
-    <Compile Include="CatTypeProduct.cs">
-      <DependentUpon>ModelShoesApp.tt</DependentUpon>
-    </Compile>
-    <Compile Include="ChangesOnProduct.cs">
-      <DependentUpon>ModelShoesApp.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Comments.cs">
-      <DependentUpon>ModelShoesApp.tt</DependentUpon>
-    </Compile>
-    <Compile Include="database_firewall_rules.cs">
-      <DependentUpon>ModelShoesApp.tt</DependentUpon>
-    </Compile>
-    <Compile Include="DetailProduct.cs">
-      <DependentUpon>ModelShoesApp.tt</DependentUpon>
-    </Compile>
-    <Compile Include="ImagesProduct.cs">
-      <DependentUpon>ModelShoesApp.tt</DependentUpon>
-    </Compile>
-    <Compile Include="LFGC1_BuscaProductoID_Result.cs">
-      <DependentUpon>ModelShoesApp.tt</DependentUpon>
-    </Compile>
-    <Compile Include="LFGC1_BuscaProductoNombre_Result.cs">
-      <DependentUpon>ModelShoesApp.tt</DependentUpon>
-    </Compile>
-    <Compile Include="LFGC1_MuestraProductos_Result.cs">
-      <DependentUpon>ModelShoesApp.tt</DependentUpon>
-    </Compile>
-    <Compile Include="ModelShoesApp.Context.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>ModelShoesApp.Context.tt</DependentUpon>
-    </Compile>
-    <Compile Include="ModelShoesApp.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>ModelShoesApp.tt</DependentUpon>
-    </Compile>
-    <Compile Include="ModelShoesApp.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>ModelShoesApp.edmx</DependentUpon>
-    </Compile>
-    <Compile Include="MPVI_SEARCH_ALL_Result.cs">
-      <DependentUpon>ModelShoesApp.tt</DependentUpon>
-    </Compile>
-    <Compile Include="MPVI_SEARCH_ID_Result.cs">
-      <DependentUpon>ModelShoesApp.tt</DependentUpon>
-    </Compile>
-    <Compile Include="MPVI_SEARCH_NAME_Result.cs">
-      <DependentUpon>ModelShoesApp.tt</DependentUpon>
-    </Compile>
-    <Compile Include="NmrhID_Result.cs">
-      <DependentUpon>ModelShoesApp.tt</DependentUpon>
-    </Compile>
-    <Compile Include="NmrhName_Result.cs">
-      <DependentUpon>ModelShoesApp.tt</DependentUpon>
-    </Compile>
-    <Compile Include="NmrhProduc_Result.cs">
-      <DependentUpon>ModelShoesApp.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Products.cs">
-      <DependentUpon>ModelShoesApp.tt</DependentUpon>
-    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Qualification.cs">
-      <DependentUpon>ModelShoesApp.tt</DependentUpon>
-    </Compile>
-    <Compile Include="SimilarProduct.cs">
-      <DependentUpon>ModelShoesApp.tt</DependentUpon>
-    </Compile>
-    <Compile Include="SizeForProduct.cs">
-      <DependentUpon>ModelShoesApp.tt</DependentUpon>
-    </Compile>
   </ItemGroup>
   <ItemGroup>
-    <None Include="App.config" />
-    <EntityDeploy Include="ModelShoesApp.edmx">
-      <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>ModelShoesApp.Designer.cs</LastGenOutput>
-    </EntityDeploy>
-    <None Include="ModelShoesApp.edmx.diagram">
-      <DependentUpon>ModelShoesApp.edmx</DependentUpon>
-    </None>
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="ModelShoesApp.Context.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>ModelShoesApp.edmx</DependentUpon>
-      <LastGenOutput>ModelShoesApp.Context.cs</LastGenOutput>
-    </Content>
-    <Content Include="ModelShoesApp.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>ModelShoesApp.edmx</DependentUpon>
-      <LastGenOutput>ModelShoesApp.cs</LastGenOutput>
-    </Content>
+    <ProjectReference Include="..\ShoesAppWeb3\ShoesAppWeb3.csproj">
+      <Project>{867fc957-ffac-4162-94f7-cd9a7eee0cd3}</Project>
+      <Name>ShoesAppWeb3</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">

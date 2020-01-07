@@ -3,12 +3,14 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using ShoesAppWeb3;
+using ShoesAppWeb3.Models;
 
 namespace Data
 {
     public class CapaDatos
     {
-        DataProductsEntities11 DTE = new DataProductsEntities11();
+        DataProductsEntities DTE  = new DataProductsEntities();
         public List<BRTV_Show_Result> Show1()
         {
 

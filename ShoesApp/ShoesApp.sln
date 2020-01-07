@@ -1,15 +1,15 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Express 15 for Windows Desktop
+# Visual Studio 15
 VisualStudioVersion = 15.0.28307.902
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ShoesApp", "ShoesApp\ShoesApp.csproj", "{8AA9FC73-DAEC-4D59-8044-3BC413BFE4B4}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Data", "Data\Data.csproj", "{2BC3DCB4-625D-4156-A527-BDD6B00652B6}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Business", "Business\Business.csproj", "{C0C5E8D1-F899-44EB-93D0-56D0C327CF02}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Common", "Common\Common.csproj", "{F98AD945-5638-48E0-A8A2-7C6AA4518A32}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ShoesAppWeb3", "ShoesAppWeb3\ShoesAppWeb3.csproj", "{867FC957-FFAC-4162-94F7-CD9A7EEE0CD3}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -17,10 +17,6 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{8AA9FC73-DAEC-4D59-8044-3BC413BFE4B4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{8AA9FC73-DAEC-4D59-8044-3BC413BFE4B4}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{8AA9FC73-DAEC-4D59-8044-3BC413BFE4B4}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{8AA9FC73-DAEC-4D59-8044-3BC413BFE4B4}.Release|Any CPU.Build.0 = Release|Any CPU
 		{2BC3DCB4-625D-4156-A527-BDD6B00652B6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{2BC3DCB4-625D-4156-A527-BDD6B00652B6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2BC3DCB4-625D-4156-A527-BDD6B00652B6}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -33,6 +29,10 @@ Global
 		{F98AD945-5638-48E0-A8A2-7C6AA4518A32}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F98AD945-5638-48E0-A8A2-7C6AA4518A32}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F98AD945-5638-48E0-A8A2-7C6AA4518A32}.Release|Any CPU.Build.0 = Release|Any CPU
+		{867FC957-FFAC-4162-94F7-CD9A7EEE0CD3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{867FC957-FFAC-4162-94F7-CD9A7EEE0CD3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{867FC957-FFAC-4162-94F7-CD9A7EEE0CD3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{867FC957-FFAC-4162-94F7-CD9A7EEE0CD3}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
