@@ -6,6 +6,31 @@
 }
 
 <h2>Products</h2>
+<div class="container">
+    <div class="advance-search">
+        <form action="#">
+            <div class="row">
+                <!-- Store Search -->
+                
+                <div class="col-lg-6 col-md-12">
+                    <div class="block d-flex">
+                        
+                        <!-- Search Button -->
+                        <p>
+                            @using(Html.BeginForm("Search","Products", FormMethod.Get))
+                            {
+                                <b>Search by Name</b>
+                                @Html.TextBox("name")<input type="submit" value="Search"/>
+                            }
+                        </p>
+
+                    </div>
+                </div>
+            </div>
+        </form>
+
+    </div>
+</div>
 
 <p>
     @Html.ActionLink("Create New", "InsertProducts","Products")
