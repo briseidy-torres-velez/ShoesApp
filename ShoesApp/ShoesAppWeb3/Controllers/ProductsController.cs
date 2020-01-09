@@ -15,12 +15,38 @@ namespace ShoesAppWeb3.Controllers
         AddProdET AddET = new AddProdET();
 
         // GET: Products
-        public ActionResult Products()
+        public ActionResult Products(string name)
         {
-            DataProductsEntities DTE = new DataProductsEntities();
 
-            return View(DTE.BRTV_Show());
+
+            try
+            {
+             
+                var x = from s in DTE.BRTV_Show()
+                        select s;
+
+                if (!String.IsNullOrEmpty(name))
+                {
+
+                    x = DTE.BRTV_Show().Where(a => a.Nombre.Contains(name));
+
+
+                }
+
+
+
+
+                return View(x.ToList());
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+
+
+
         }
+       
 
         [HttpGet]
         public ActionResult InsertProducts()
@@ -138,13 +164,7 @@ namespace ShoesAppWeb3.Controllers
                 throw;
             }
         }
-        public ActionResult Search(string name)
-        {
-
-            DataProductsEntities DTE = new DataProductsEntities();
-            
-            return View(DTE.BRTV_SearchName(name));
-        }
+       
 
     }
 }
