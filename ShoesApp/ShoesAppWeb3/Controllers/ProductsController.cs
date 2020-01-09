@@ -12,38 +12,38 @@ namespace ShoesAppWeb3.Controllers
     public class ProductsController : Controller
     {
         DataProductsEntities DTE = new DataProductsEntities();
+        CapaDatos cd = new CapaDatos();
         AddProdET AddET = new AddProdET();
 
         // GET: Products
-        public ActionResult Products(string name)
+        public ActionResult Products(string searchBy, string search)
         {
+            var x = from s in DTE.BRTV_Show()
+                    select s;
 
-
-            try
+            if (!String.IsNullOrEmpty(search))
             {
-             
-                var x = from s in DTE.BRTV_Show()
-                        select s;
-
-                if (!String.IsNullOrEmpty(name))
+                if (searchBy == "Name")
+                {
+                    x = DTE.BRTV_Show().Where(a => a.Nombre.Contains(search));
+                }
+                else if (searchBy == "ID")
+                {
+                    int id = int.Parse(search);
+                  
+                    x = DTE.BRTV_Show().Where(a => a.Id == id);
+                }
+                else
                 {
 
-                    x = DTE.BRTV_Show().Where(a => a.Nombre.Contains(name));
-
-
                 }
-
-
-
-
-                return View(x.ToList());
-            }
-            catch (Exception)
-            {
-                throw;
             }
 
+          
 
+
+            return View(x.ToList());
+           
 
         }
        
